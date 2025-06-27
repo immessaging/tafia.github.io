@@ -1,0 +1,450 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+   
+  margin-top: 0%;
+  background-color: rgb(238, 236, 233);
+}
+/* Container for Responsive Layout */
+.container {
+    width: 90%;
+    background-image: url('../image/car-rental-lafia.png');
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../image/car-rental-lafia.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: black;
+    border-bottom: 2px solid #ea1538;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    padding: 10px 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.4s ease-in-out;
+}
+
+.nav-list li a:hover {
+    color: #ea1538;
+}
+
+.nav-list li a.active {
+   border-bottom: 2px solid #ea1538;
+}
+.auth-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Buttons */
+.sub,.button,.btn-primary,.btn-secondary,.btn-lg {
+    border: none;
+    text-decoration: none;
+    background: #ea1538;
+    padding: 12px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sub:hover,.button:hover,.btn-primary:hover,.btn-secondary:hover {
+    transform: scale(1.1);
+    background: white;
+    color: #ea1538;
+}
+
+/* Showcase */
+#showcase h1 {
+    margin-top: 20%;
+    text-shadow: 3px 3px 4px black;
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+.action {
+    color: red;
+    text-shadow: 3px 3px 5px black;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+.container {
+        width: 95%;
+}
+
+.nav-list {
+        flex-direction: column;
+}
+}
+
+@media screen and (max-width: 768px) {
+.nav {
+        flex-direction: column;
+        text-align: center;
+}
+
+.auth-links {
+        flex-direction: column;
+        align-items: center;
+}
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+}
+
+.hero {
+        height: auto;
+        padding: 50px 0;
+}
+
+.nav-list li {
+        padding: 5px 10px;
+}
+
+.button,.sub {
+        padding: 10px 20px;
+}
+}
+
+/* Section Headers */
+section {
+   padding: 60px 20px;
+   background-color: #f9f9f9;
+   text-align: center;
+}
+
+section h2 {
+   color: #ea1538;
+   margin-bottom: 30px;
+   font-size: 28px;
+}
+
+/* Fleet Showcase */
+.fleet-gallery {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   flex-wrap: wrap;
+}
+
+.car-card {
+   background: white;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   padding: 15px;
+   width: 250px;
+}
+
+.car-card img {
+   width: 100%;
+   border-radius: 8px;
+   margin-bottom: 10px;
+}
+
+/* Testimonials */
+.testimonials {
+   background: #fff;
+}
+
+.testimonial-box {
+   max-width: 600px;
+   margin: 20px auto;
+   font-style: italic;
+   background: #f0f0f0;
+   padding: 20px;
+   border-left: 5px solid #ea1538;
+}
+
+/* Why Choose Us */
+.why-us ul {
+   list-style: none;
+   padding: 0;
+}
+
+.why-us ul li {
+   margin: 10px 0;
+   font-size: 16px;
+}
+
+/* Contact Info */
+.contact-info {
+   background: black;
+   color: white;
+}
+
+.contact-info a.whatsapp-btn {
+   display: inline-block;
+   margin-top: 10px;
+   background: #25D366;
+   color: white;
+   padding: 10px 20px;
+   border-radius: 30px;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.contact-info a.whatsapp-btn:hover {
+   background: white;
+   color: #25D366;
+   border: 2px solid #25D366;
+}
+/* Dropdown Menu Styling */
+.dropdown {
+   position: relative;
+}
+
+.dropdown-menu {
+   display: none;
+   position: absolute;
+   background-color: black;
+   top: 100%;
+   left: 0;
+   min-width: 160px;
+   z-index: 999;
+   flex-direction: column;
+   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+   display: flex;
+}
+
+.dropdown-menu li {
+   padding: 10px;
+   text-align: left;
+}
+
+.dropdown-menu li a {
+   color: white;
+   text-decoration: none;
+   display: block;
+}
+
+.dropdown-menu li a:hover {
+   background-color: #ea1538;
+   color: white;
+}
+
+.footer {
+   background: black;
+   color: white;
+   padding: 40px 20px;
+   font-size: 15px;
+}
+
+.footer-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   max-width: 1200px;
+   margin: auto;
+}
+
+.footer-section {
+   flex: 1;
+   min-width: 200px;
+   margin-bottom: 20px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+   color: #ea1538;
+   margin-bottom: 15px;
+}
+
+.footer-section ul {
+   list-style: none;
+   padding: 0;
+}
+
+.footer-section ul li {
+   margin-bottom: 10px;
+}
+
+.footer-section ul li a,
+.footer-section a {
+   color: white;
+   text-decoration: none;
+}
+
+.footer-section a:hover {
+   color: #ea1538;
+}
+
+.footer-bottom {
+   text-align: center;
+   border-top: 1px solid #ea1538;
+   padding-top: 20px;
+   margin-top: 20px;
+   font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+   .footer-container {
+       flex-direction: column;
+       text-align: center;
+   }
+}
+
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+*{
+   margin:0;
+   padding:0;
+box-sizing:border-box;
+font-family:'Josefin Sans' Sans-Serif;
+
+}
+
+.hero{
+height:100vh;
+width:100%;
+background-image:url('../image/car-rental-lafia.jpg');
+background-size:cover;
+background-position:center;
+justify-items: center;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2);
+}
+ul{float:left;}
+
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding-top:40px;
+padding-right:10px;
+padding-left:10px;
+border:1px groove black;
+border-position:fixed;
+background:black;
+}
+
+
+header{
+   width: 100vw;
+   height: 100vh;
+text-align:center;
+align-items:left;
+justify-content:left;
+color:rgb(255,0,0);
+margin-top:40px;
+padding:0px 20px;
+text-shadow: 3px 3px 4px black;
+float: left;
+top: 2px;
+
+}
+
+
+
+nav ul li{
+list-style-type:none;
+display:inline-block;
+padding:10px 20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+text-align: center;
+padding-bottom: 25px;
+}
+
+nav ul li a:hover{
+color:#ea1538;
+transition:.4s;
+}
+
+.sub{
+border:none;
+text-decoration:none;
+background:#ea1538;
+padding:12px 30px;
+color:white;
+font-weight:bold;
+border-radius:30px;
+margin-bottom: 20px;
+}
+.sub:hover{
+transform:scale(1.2);
+cursor:pointer;
+}
+#in{
+   margin-right: 15px;
+}
+.button{
+margin-top:7%;
+border:none;
+text-decoration:none;
+background:#ea1538;
+padding:12px 30px;
+color:white;
+font-weight:bold;
+border-radius:30px;
+line-height:1.9;
+}
+.action{
+          color:red;
+          text-shadow: 3px 3px 5px black;
+}
+
+.sub:hover
+{
+transform:scale(1.1);
+cursor:pointer;
+background:white;
+color:#ea1538;
+}
+
+#showcase h1{
+   margin-top: 20%;
+}
+
+*/
+
+
+

@@ -1,0 +1,95 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel | TAFIA</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="admin-style.css">
+  <style>
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f6f6f6;
+        margin: 0;
+        padding: 0;
+      }
+      
+      header {
+        background-color: #ea1538;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      table {
+        width: 90%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      th, td {
+        padding: 12px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      
+      th {
+        background-color: #ea1538;
+        color: #fff;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+            
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TAFIA Admin Dashboard</h1>
+    <nav>
+      <a href="admin-dashboard.php">View Orders</a> |
+      <a href="admin-logout.php">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <iframe src="admin-dashboard.php" style="width:100%; height:80vh; border:none;"></iframe>
+  </main>
+  <input type="text" id="search-input" placeholder="Search orders..." oninput="filterOrders()" style="margin: 20px auto; display:block; padding: 10px; width: 80%;">
+
+
+  <a href="export-csv.php" target="_blank">⬇ Export as CSV</a>
+  <a href="export-pdf.php" target="_blank">📄 Download PDF</a>
+
+  <canvas id="salesChart" width="400" height="200"></canvas>
+
+
+  <script>   
+
+
+    function filterOrders() {
+        const input = document.getElementById("search-input").value.toLowerCase();
+        const rows = document.querySelectorAll("table tr:not(:first-child)");
+      
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(input)? "": "none";
+      });
+      }
+      
+  </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+
+<?php
+session_start();
+
+// Secure login credentials (hashed password)
+$admin_user = "admin";
+$stored_hash = password_hash("SuperSecurePassword123!", PASSWORD_DEFAULT); // Replace with actual secure password
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if ($_POST["username"] === $admin_user && password_verify($_POST["password"], $stored_hash)) {
+        $_SESSION["admin_logged_in"] = true;
+        header("Location: admin-dashboard.php");
+        exit();
+} else {
+        $error = "Invalid credentials!";
+}
+}
+?>
+
+<form method="POST">
+    <label>Username:</label>
+    <input type="text" name="username" required>
+    <label>Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+
+<?php if (isset($error)) echo "<p style='color:red;'>$error</p>";?>
+
+
+<?php
+session_start();
+
+// Redirect unauthorized users to login page
+if (!isset($_SESSION["admin_logged_in"])) {
+    header("Location: admin-login.php");
+    exit();
+}
+
+echo "<h1>Admin Dashboard - Stored Orders</h1>";
+
+$file = "orders.txt";
+
+if (!file_exists($file)) {
+    echo "<p>No orders found.</p>";
+    exit();
+}
+
+$orders = file($file, FILE_IGNORE_NEW_LINES);
+echo "<table border='1' style='width:100%;'>";
+echo "<tr><th>Buyer Name</th><th>Phone</th><th>Email</th><th>Car</th><th>Deposit Paid</th><th>Transaction Ref</th></tr>";
+
+foreach ($orders as $order) {
+    $data = json_decode($order, true);
+    echo "<tr>";
+    echo "<td>{$data["buyerName"]}</td>";
+    echo "<td>{$data["phone"]}</td>";
+    echo "<td>{$data["email"]}</td>";
+    echo "<td>{$data["carName"]}</td>";
+    echo "<td>₦". number_format($data["depositAmount"]). "</td>";
+    echo "<td>{$data["reference"]}</td>";
+    echo "</tr>";
+}
+
+echo "</table>";
+?>
+
+
+<?php
+session_start();
+session_destroy();
+header("Location: admin-login.php");
+exit();
+?>
+
+
+<?php
+header("Content-Type: application/json");
+
+$file = "orders.txt"; // Ensure it's inside /admin/
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    if (!$data || empty($data["buyerName"]) || empty($data["phone"]) || empty($data["email"]) || empty($data["carName"])) {
+        echo json_encode(["status" => "error", "message" => "Invalid data received."]);
+        exit();
+}
+
+    file_put_contents($file, json_encode($data). PHP_EOL, FILE_APPEND);
+
+    echo json_encode(["status" => "success", "message" => "Order stored successfully!"]);
+}
+?>
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #ea1538;
+    color: white;
+}
+

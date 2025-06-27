@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Ride | JEMFIA Car Rental</title>
+    <link rel="stylesheet" href="css/book-style.css">
+    <!-- Paystack & Google Maps JS -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
+</head>
+<body>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="book.html" class="active">SERVICES</a></li>
+            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Book Your Ride</h1>
+        <p>Select a vehicle, enter your details, and ride with ease.</p>
+    </header>
+
+    <!-- Car Listing -->
+    <section class="car-list">
+        <div class="car-card" data-type="Sedan">
+            <img src="image/6.jpeg" alt="Sedan">
+            <h3>Luxury Sedan</h3>
+            <p>Perfect for executive travel and small families (4 seats).</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card" data-type="SUV">
+            <img src="image/2.jpeg" alt="SUV">
+            <h3>Spacious SUV</h3>
+            <p>Ideal for off-road trips and groups (7 seats).</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card" data-type="Van">
+            <img src="image/7.png" alt="Van">
+            <h3>Wedding Van</h3>
+            <p>Comfortably seats 12 passengers for special occasions.</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+        <div class="car-card" data-type="Bus">
+            <img src="image/4.jpeg" alt="Bus">
+            <h3>Transport Bus</h3>
+            <p>Large capacity for tours and group logistics (30 seats).</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Booking Form Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Enter Booking Details</h2>
+            <form id="booking-form">
+                <input type="hidden" id="vehicleType" name="vehicleType">
+                <label>Name</label>
+                <input type="text" id="name" placeholder="enter your name" required>
+                <label>Phone</label>
+                <input type="number" id="phone" placeholder="enter your phone number" required>
+                <label>Email</label>
+                <input type="email" id="email" placeholder="enter your email" required>
+                <label>Address</label>
+                <label>Pickup Address (Lafia only)</label>
+                <input type="text" id="pickup" placeholder="e.g., 123 Main St, Lafia" required>
+                 <label>Destination Address</label>
+                <input type="text" id="destination" placeholder="e.g Ugwan Father, Doma" required>
+                <label>Promo Code (optional)</label>
+                 <input type="text" id="promo">
+                <label><input type="checkbox" id="roundTrip"> This is a round trip</label>
+                <select id="vehicleType">
+                    <option>Sedan</option>
+                    <option>SUV</option>
+                    ...
+                  </select>
+                  <input type="number" id="vehicleQty" min="1" value="1">
+                <button type="submit" class="submit-btn">Confirm Booking</button>
+            </form>
+            <p id="form-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- Booking Cart -->
+    <section class="cart-section">
+        <h2>Your Booking Cart</h2>
+        <div id="cart-items"></div>
+        <button id="pay-btn" class="pay-btn" disabled>Pay Now</button>
+    </section>
+    <script src="local-distances.js"></script>
+    <script src="book.js"></script>
+</body>
+</html>

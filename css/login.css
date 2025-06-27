@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, gold #e3f2fd, gold );
+    background-color:#a51c2c;
+    /*#f1f8e9;*/
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 7px 8px 14px rgba(17, 11, 11, 0.15);
+    margin-left: 35%;
+  }
+  
+  .logo {
+    width: 80px;
+    margin: 0 auto 15px;
+    display: block;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0d0531;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #38070d;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #06530c;
+  }
+  
+  #loginMessage {
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+  }
+  
+  
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .login-container {
+        width: calc(50% - 30px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-container{
+        width: 100%;
+    }
+}
+
+
+.footer {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    font-size: 15px;
+    margin-top: 20%;
+ }
+ 
+ .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: auto;
+ }
+ 
+ .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+ }
+ 
+ .footer-section h3,
+ .footer-section h4 {
+    color: #ea1538;
+    margin-bottom: 15px;
+ }
+ 
+ .footer-section ul {
+    list-style: none;
+    padding: 0;
+ }
+ 
+ .footer-section ul li {
+    margin-bottom: 10px;
+ }
+ 
+ .footer-section ul li a,
+ .footer-section a {
+    color: white;
+    text-decoration: none;
+ }
+ 
+ .footer-section a:hover {
+    color: #ea1538;
+ }
+ 
+ .footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ea1538;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+ }
+ 
+ @media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+ }

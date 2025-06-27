@@ -1,0 +1,156 @@
+
+/* Base Styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3a3838;
+    color: #ebe6e6;
+}
+
+/* Header Section */
+.article-header {
+    background-color: #ea1538;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.article-header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Main Content Grid */
+.article-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.article-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Card Styles */
+.article {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 7px 7px 14px rgba(177, 86, 86, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    color: #080807;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.article:hover {
+    transform: scale(1.03);
+}
+
+.article h3 {
+    margin-top: 0;
+    color: #080807;
+}
+
+.article p {
+    font-weight: bold;
+    color: #ea1538;
+}
+
+a {
+    display: block;
+    background-color: #b81c24;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+    color: #f2f2f2;
+}
+
+/* Footer Styling */
+.footer {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #ea1538;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a,
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #ea1538;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ea1538;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+.article {
+        width: calc(50% - 20px);
+}
+
+.footer-container {
+        flex-direction: column;
+        text-align: center;
+}
+}
+
+@media screen and (max-width: 480px) {
+.article {
+        width: 100%;
+}
+}
+

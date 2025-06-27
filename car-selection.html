@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Selection | TAFIA Car Rental</title>
+    <link rel="stylesheet" href="css/car-selection.css">
+</head>
+<body>
+
+    <header class="article-header">
+        <h1>Select Your Dream Car</h1>
+        <p>Deposit 30% upfront and pay gradually over 24 months.</p>
+    </header>
+
+    <section class="article-grid">
+        <div class="car-carousel">
+            <button onclick="flipSection(-1)" class="arrow left">&#10094;</button>
+          
+            <div id="car-sections-wrapper">
+              <!-- Car sections will be injected here by JavaScript -->
+            </div>
+          
+            <button onclick="flipSection(1)" class="arrow right">&#10095;</button>
+          </div>
+          
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+    <section class="article-grid">
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+    <section class="article-grid">
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+    <section class="article-grid">
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+    <section class="article-grid">
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+    <section class="article-grid">
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+    <section class="article-grid">
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+    <section class="article-grid">
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+    <section class="article-grid">
+        <div class="car-section">
+            <h2>Section 1</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Toyota Corolla 2022</h3>
+                    <p>Fuel-efficient sedan with advanced safety features.</p>
+                    <p>Cost: ₦8,000,000</p>
+                    <p>Deposit (30%): ₦2,400,000</p>
+                    <p>Monthly Payment: ₦240,000</p>
+                    <button onclick="openPaymentForm('Toyota Corolla 2022', 8000000)">Pay Now</button>
+                </div>
+
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+                <div class="car-item">
+                    <h3>Honda Civic 2021</h3>
+                    <p>Stylish and reliable performance.</p>
+                    <p>Cost: ₦7,500,000</p>
+                    <p>Deposit (30%): ₦2,250,000</p>
+                    <p>Monthly Payment: ₦225,000</p>
+                    <button onclick="openPaymentForm('Honda Civic 2021', 7500000)">Pay Now</button>
+                </div>
+
+                <!-- More cars here -->
+            </div>
+        </div>
+
+        <!-- Repeat for 9 more sections -->
+
+    </section>
+
+    <div id="payment-form" class="payment-popup">
+        <div class="form-container">
+            <h2>Buy Now</h2>
+            <form id="buy-form" action="php/process-payment.php" method="POST">
+                <input type="hidden" name="carName" id="carName">
+                <input type="hidden" name="carCost" id="carCost">
+                <label>Name:</label><input type="text" name="buyerName" required>
+                <label>Phone:</label><input type="text" name="phone" required>
+                <label>Email:</label><input type="email" name="email" required>
+                <label>Address:</label><input type="text" name="address" required>
+                <label>Permanent Address:</label><input type="text" name="permanentAddress" required>
+                <label>Hometown:</label><input type="text" name="hometown" required>
+                <label>Village:</label><input type="text" name="village" required>
+                <label>LGA:</label><input type="text" name="lga" required>
+                <label>State:</label><input type="text" name="state" required>
+                <label>Office Address:</label><input type="text" name="officeAddress" required>
+                <label>Church/Mosque:</label><input type="text" name="placeOfWorship" required>
+                <label>Pastor/Imam Name:</label><input type="text" name="religiousLeader" required>
+                <label>Spouse Name:</label><input type="text" name="spouseName">
+                <label>Spouse Phone:</label><input type="text" name="spousePhone">
+            </label>
+            <label>Deposit Amount:</label><input type="text" name="depositAmount" id="depositAmount" readonly>
+                <label>
+
+                    <input type="checkbox" name="agreement" required>
+                    I agree to the repayment terms and default penalties (₦50,000 after 2 months of delay).
+                
+                <button type="button" onclick="payWithPaystack()">Proceed to Payment</button>
+            
+            </form>
+        </div>
+    </div>
+
+    <script src="car-selection.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+</body>
+</html>
+

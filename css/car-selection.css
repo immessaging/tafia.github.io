@@ -1,0 +1,242 @@
+
+/* General Styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3a3838;
+    color: #ebe6e6;
+}
+
+/* Header Section */
+.article-header {
+    background-color: #ea1538;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.article-header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Car Sections */
+.car-section {
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 20px;
+    background: #292727;
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.car-section h2 {
+    text-align: center;
+    color: #ea1538;
+}
+
+/* Car Listings */
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-item {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.car-item:hover {
+    transform: scale(1.05);
+}
+
+.car-item h3 {
+    margin-top: 0;
+    color: #080807;
+}
+
+.car-item p {
+    font-weight: bold;
+    color: #ea1538;
+}
+
+/* Buttons */
+button {
+    background-color: #b81c24;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Payment Form Popup */
+.payment-popup {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.payment-popup.active {
+    display: block;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Agreement Checkbox */
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+.car-list {
+        flex-direction: column;
+        align-items: center;
+}
+
+.car-item {
+        width: 80%;
+}
+}
+
+.car-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .arrow {
+    background-color: transparent;
+    color: white;
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  #car-sections-wrapper {
+    width: 90%;
+    overflow: hidden;
+  }
+
+  .car-section {
+    display: none;
+    transition: all 0.4s ease;
+  }
+  
+  .car-section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .car-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+
+.payment-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.payment-popup.active {
+    display: block;
+}
+
+.form-container {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+input, label {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #b81c24;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ea1538;
+}
+
+/* Ensure the popup remains inside the viewport */
+@media screen and (max-width: 768px) {
+.payment-popup {
+        width: 95%;
+        max-width: 400px;
+}
+}
+

@@ -1,0 +1,5 @@
+<!DOCTYPE html> <html> <head> <style> .circle {   width: 100px;   height: 100px;   background-color: blue;   border-radius: 50%;   transition: background-color 2s ease; } .circle:hover {   background-color: purple; } </style> </head> <body> 
+ 
+<div class="circle"></div> 
+ 
+</body> </html> 

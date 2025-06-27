@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tafia| Customer - Registration</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+        <h1> Welcome to Tafia Customer Registration Form</h1>
+        <section id="register">
+            <h2>Register as a Customer</h2>
+            <form id="register-form">
+                <input type="text" name="name" placeholder="First Name" required>
+                <input type="text" name="name" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="password" placeholder="Confirm Password" required>
+                <input type="date" name="DoB" placeholder="Date of Birth" required>
+                <input type="text" name="mobileno" placeholder="Mobile No" required>
+                <button type="submit" id="btn">Register</button>
+            </form>
+        </section>
+        
+        </body>
+        <script>
+            document.getElementById('register-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const address = event.target.address.value;
+
+    // Basic form validation
+    if (!name || !email || !password || !address) {
+        alert("All fields are required!");
+        return;
+    }
+
+    // Sending data to the backend (placeholder)
+    fetch('/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, password, address })
+    }).then(response => response.json())
+      .then(data => {
+        alert(data.message);
+    }).catch(error => {
+        console.error("Error:", error);
+    });
+});
+
+        </script>
+       
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>TAFIA Car Rental</h3>
+        <p>Quick and affordable car rental services for weddings, logistics, and your personal comfort across Lafia and beyond.</p>
+      </div>
+  
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section contact">
+        <h4>Contact Us</h4>
+        <p>📍 Lafia, Nasarawa State, Nigeria</p>
+        <p>📞 +234 816 346 4557</p>
+        <p>✉️ support@jemfiarentals.com</p>
+      </div>
+  
+      <div class="footer-section social">
+        <h4>Follow Us</h4>
+        <a href="#" target="_blank">Facebook</a> |
+        <a href="#" target="_blank">Instagram</a> |
+        <a href="#" target="_blank">Twitter</a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 TAFIA Car Rental. All rights reserved.</p>
+    </div>
+  </footer>
+        </html>
